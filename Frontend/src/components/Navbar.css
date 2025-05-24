@@ -1,0 +1,55 @@
+/* Navbar.css */
+
+/* Use Roboto Serif font */
+.custom-font {
+    font-family: 'Roboto Serif', serif;
+  }
+  
+  /* Set navbar height and background */
+  .navbar {
+    background-color: white !important;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    min-height: 70px;
+  }
+  
+  /* Hover underline effect for nav links */
+  .nav-link-hover {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link-hover::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #A62C2C; /* Hover underline color */
+    bottom: -3px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link-hover:hover::after {
+    width: 100%;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: #A62C2C;
+    border-color: #A62C2C;
+  }
+  
+  .btn-primary:hover{
+    background-color: black;
+  }
+  .btn-outline-primary {
+    color: #A62C2C;
+    border-color: #A62C2C;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #A62C2C;
+    color: white;
+  }
+  

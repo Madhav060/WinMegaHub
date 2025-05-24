@@ -1,0 +1,309 @@
+[
+  {
+    "title": "Photography Contest",
+    "status": "ongoing",
+    "category": "Photography",
+    "description": "Capture stunning moments from around the world. Show us your unique perspective through the lens.",
+    "deadline": "2025-04-15T23:59:59",
+    "registrationStart": "2025-03-01T00:00:00",
+    "registrationEnd": "2025-04-10T23:59:59",
+    "totalRegistrations": 125,
+    "prizes": "Top 3 entries will receive DSLR cameras and online feature on our platform.",
+    "rules": [
+      "Only original photographs allowed",
+      "One submission per participant",
+      "No watermarks on images",
+      "Minimum resolution: 3000x2000 pixels",
+      "EXIF data must be preserved"
+    ],
+    "bannerUrl": "/images/contests/photography.jpg"
+  },
+  {
+    "title": "Poetry Slam",
+    "status": "ongoing",
+    "category": "Literature",
+    "description": "Express your emotions through powerful words. Original poems only in any style or form.",
+    "deadline": "2025-04-16T23:59:59",
+    "registrationStart": "2025-03-05T00:00:00",
+    "registrationEnd": "2025-04-14T23:59:59",
+    "totalRegistrations": 87,
+    "prizes": "Publication in literary magazine and ₹7,500 cash prize",
+    "rules": [
+      "Maximum 40 lines",
+      "No previously published work",
+      "Submit as PDF or Word document",
+      "Can submit up to 3 poems"
+    ],
+    "bannerUrl": "/images/contests/poetry-slam.jpg"
+  },
+  {
+    "title": "Code Challenge",
+    "status": "ongoing",
+    "category": "Coding",
+    "description": "Solve real-world coding problems under time pressure. Show off your technical skills.",
+    "deadline": "2025-04-20T23:59:59",
+    "registrationStart": "2025-03-10T00:00:00",
+    "registrationEnd": "2025-04-18T23:59:59",
+    "totalRegistrations": 290,
+    "prizes": "₹10,000 Amazon voucher and internship opportunities with tech partners",
+    "rules": [
+      "Use any programming language",
+      "No plagiarism - all code must be original",
+      "Complete within 3 hours of start time",
+      "Must pass all test cases"
+    ],
+    "bannerUrl": "/images/contests/code-challenge.png"
+  },
+  {
+    "title": "Drawing Contest",
+    "status": "ongoing",
+    "category": "Art",
+    "description": "Showcase your drawing skills in any medium. Theme: 'Urban Life'",
+    "deadline": "2025-04-22T23:59:59",
+    "registrationStart": "2025-03-15T00:00:00",
+    "registrationEnd": "2025-04-20T23:59:59",
+    "totalRegistrations": 156,
+    "prizes": "Art supplies worth ₹8,000 and exhibition opportunity",
+    "rules": [
+      "Original artwork only",
+      "Digital or traditional media accepted",
+      "Submit high-quality scan or photo",
+      "Include short artist statement"
+    ],
+    "bannerUrl": "/images/contests/drawing-contest.jpg"
+  },
+  {
+    "title": "Short Story Contest",
+    "status": "upcoming",
+    "category": "Literature",
+    "description": "Craft compelling short stories that captivate readers. Any genre welcome.",
+    "deadline": "2025-06-01T23:59:59",
+    "registrationStart": "2025-05-01T00:00:00",
+    "registrationEnd": "2025-05-30T23:59:59",
+    "totalRegistrations": 0,
+    "prizes": "Publication in annual anthology and ₹5,000 prize for winner",
+    "rules": [
+      "Max 2000 words",
+      "Original content only",
+      "English or Hindi submissions accepted",
+      "Standard manuscript format"
+    ],
+    "bannerUrl": "/images/contests/short-story.jpg"
+  },
+  {
+    "title": "UI Design Battle",
+    "status": "upcoming",
+    "category": "Design",
+    "description": "Design sleek interfaces under pressure. Theme revealed at competition start.",
+    "deadline": "2025-05-10T23:59:59",
+    "registrationStart": "2025-04-25T00:00:00",
+    "registrationEnd": "2025-05-08T23:59:59",
+    "totalRegistrations": 0,
+    "prizes": "Cash prizes up to ₹15,000 and 1-year design toolkit license",
+    "rules": [
+      "Design must be original work",
+      "Submit Figma or XD file",
+      "Include design rationale",
+      "3-hour time limit"
+    ],
+    "bannerUrl": "/images/contests/ui-battle.png"
+  },
+  {
+    "title": "Eco Poster Making",
+    "status": "upcoming",
+    "category": "Art",
+    "description": "Create impactful posters promoting environmental awareness and sustainability.",
+    "deadline": "2025-06-10T23:59:59",
+    "registrationStart": "2025-05-10T00:00:00",
+    "registrationEnd": "2025-06-08T23:59:59",
+    "totalRegistrations": 0,
+    "prizes": "Premium art supplies package and certificate of excellence",
+    "rules": [
+      "Use eco-friendly materials if physical submission",
+      "Digital or handmade allowed",
+      "Theme: 'Restore Our Earth'",
+      "Include brief explanation"
+    ],
+    "bannerUrl": "/images/contests/eco-poster.jpg"
+  },
+  {
+    "title": "Startup Idea Pitch",
+    "status": "upcoming",
+    "category": "Entrepreneurship",
+    "description": "Pitch your innovative startup ideas to industry experts and investors.",
+    "deadline": "2025-06-20T23:59:59",
+    "registrationStart": "2025-05-15T00:00:00",
+    "registrationEnd": "2025-06-18T23:59:59",
+    "totalRegistrations": 0,
+    "prizes": "3-month mentorship program and seed funding up to ₹50,000",
+    "rules": [
+      "Pitch deck required (max 10 slides)",
+      "Solo or team (max 3 members)",
+      "10-minute live presentation",
+      "Must include business model"
+    ],
+    "bannerUrl": "/images/contests/startup-pitch.jpg"
+  },
+  {
+    "title": "Gaming Tournament",
+    "status": "upcoming",
+    "category": "Gaming",
+    "description": "Battle it out in popular multiplayer games. Games include Valorant, FIFA, and Tekken.",
+    "deadline": "2025-06-25T23:59:59",
+    "registrationStart": "2025-06-01T00:00:00",
+    "registrationEnd": "2025-06-23T23:59:59",
+    "totalRegistrations": 0,
+    "prizes": "High-end gaming peripherals and championship trophy",
+    "rules": [
+      "Only pre-registered players can participate",
+      "One game entry per participant",
+      "Strict fair play policy enforced",
+      "Own equipment required"
+    ],
+    "bannerUrl": "/images/contests/gaming-tournament.jpg"
+  },
+  {
+    "title": "Winter Hackathon",
+    "status": "past",
+    "category": "Coding",
+    "description": "24-hour coding marathon to build innovative solutions for winter-themed challenges.",
+    "deadline": "2025-01-10T23:59:59",
+    "registrationStart": "2024-12-01T00:00:00",
+    "registrationEnd": "2025-01-01T23:59:59",
+    "totalRegistrations": 410,
+    "prizes": "Tech gadgets, certificates and internship offers with sponsors",
+    "rules": [
+      "Team of up to 4 members allowed",
+      "48-hour development period",
+      "Project must be deployed and demoed",
+      "Open source preferred"
+    ],
+    "bannerUrl": "/images/contests/winter-hackathon.jpg"
+  },
+  {
+    "title": "Logo Redesign",
+    "status": "past",
+    "category": "Design",
+    "description": "Revamp our brand identity with your creative logo design skills.",
+    "deadline": "2025-02-20T23:59:59",
+    "registrationStart": "2025-01-20T00:00:00",
+    "registrationEnd": "2025-02-15T23:59:59",
+    "totalRegistrations": 180,
+    "prizes": "Winning logo will be featured + ₹8,000 cash prize",
+    "rules": [
+      "Submit PNG and vector formats",
+      "Max 2 entries per participant",
+      "Must reflect modern minimalism aesthetic",
+      "Include color palette"
+    ],
+    "bannerUrl": "/images/contests/logo-redesign.png"
+  },
+  {
+    "title": "Music Composition",
+    "status": "past",
+    "category": "Music",
+    "description": "Compose original music pieces inspired by the theme 'Journey Through Time'.",
+    "deadline": "2025-02-01T23:59:59",
+    "registrationStart": "2024-12-15T00:00:00",
+    "registrationEnd": "2025-01-25T23:59:59",
+    "totalRegistrations": 135,
+    "prizes": "Professional studio recording time and online distribution deal",
+    "rules": [
+      "Original compositions only - no covers",
+      "Maximum duration: 3 minutes",
+      "Submit as MP3 or WAV format",
+      "Include composition notes"
+    ],
+    "bannerUrl": "/images/contests/music-composition.jpg"
+  },
+  {
+    "title": "Monsoon Photography",
+    "status": "past",
+    "category": "Photography",
+    "description": "Capture the essence, beauty and drama of the monsoon season through your lens.",
+    "deadline": "2025-03-10T23:59:59",
+    "registrationStart": "2025-02-01T00:00:00",
+    "registrationEnd": "2025-03-05T23:59:59",
+    "totalRegistrations": 200,
+    "prizes": "Photo gear vouchers worth ₹10,000 and online exhibition feature",
+    "rules": [
+      "No filters or heavy editing allowed",
+      "Photo must clearly reflect monsoon theme",
+      "Submit high-resolution JPEG files",
+      "Include location and camera details"
+    ],
+    "bannerUrl": "/images/contests/monsoon-photo.jpg"
+  },
+  {
+    "title": "Blog-a-thon",
+    "status": "past",
+    "category": "Literature",
+    "description": "Write engaging, well-researched blogs on trending topics in technology and culture.",
+    "deadline": "2025-03-15T23:59:59",
+    "registrationStart": "2025-02-15T00:00:00",
+    "registrationEnd": "2025-03-10T23:59:59",
+    "totalRegistrations": 150,
+    "prizes": "₹3,000 Amazon voucher and content publishing deal",
+    "rules": [
+      "Minimum 800 words",
+      "Plagiarism will lead to immediate disqualification",
+      "Cite all sources properly",
+      "Submit as Word document or Google Doc"
+    ],
+    "bannerUrl": "/images/contests/blogathon.png"
+  },
+  {
+    "title": "Mini App Contest",
+    "status": "past",
+    "category": "Coding",
+    "description": "Build small but impactful applications that solve specific problems.",
+    "deadline": "2025-03-30T23:59:59",
+    "registrationStart": "2025-03-01T00:00:00",
+    "registrationEnd": "2025-03-25T23:59:59",
+    "totalRegistrations": 240,
+    "prizes": "₹5,000 cash prize and feature in our app gallery",
+    "rules": [
+      "Application should be under 20MB",
+      "Demo video required (max 2 mins)",
+      "Must solve a real-world problem",
+      "Open source preferred"
+    ],
+    "bannerUrl": "/images/contests/mini-app.png"
+  },
+  {
+    "title": "Creative Caption",
+    "status": "past",
+    "category": "Social Media",
+    "description": "Show your wit and creativity by coming up with the best captions for viral images.",
+    "deadline": "2025-04-05T23:59:59",
+    "registrationStart": "2025-03-10T00:00:00",
+    "registrationEnd": "2025-04-03T23:59:59",
+    "totalRegistrations": 300,
+    "prizes": "Social media spotlight and ₹2,000 gift card",
+    "rules": [
+      "One caption submission per image",
+      "Keep captions under 20 words",
+      "No offensive or inappropriate content",
+      "Most likes wins"
+    ],
+    "bannerUrl": "/images/contests/creative-caption.jpg"
+  },
+  {
+    "title": "Tech Trivia",
+    "status": "past",
+    "category": "Quiz",
+    "description": "Test your technology knowledge in this fast-paced online trivia competition.",
+    "deadline": "2025-04-01T23:59:59",
+    "registrationStart": "2025-03-01T00:00:00",
+    "registrationEnd": "2025-03-30T23:59:59",
+    "totalRegistrations": 320,
+    "prizes": "₹4,000 cash and tech merchandise bundle",
+    "rules": [
+      "Solo participation only",
+      "30 questions in 20 minutes",
+      "No external help or research during quiz",
+      "Tie-breaker questions will be used"
+    ],
+    "bannerUrl": "/images/contests/tech-trivia.jpg"
+  }
+]

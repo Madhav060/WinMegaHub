@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.contests-bg {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+}
+
+.custom-btn {
+  background: transparent;
+  color: #ffc107;
+  border: 2px solid #ffc107;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.custom-btn:hover,
+.custom-btn.active {
+  background: #ffc107;
+  color: #000;
+}
+
+.custom-select {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 6px 12px;
+  border: 2px solid #ffc107;
+}
+
+.glassmorph {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.glassmorph:hover {
+  transform: translateY(-5px);
+}
