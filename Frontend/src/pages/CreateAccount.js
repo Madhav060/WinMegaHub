@@ -1,61 +1,68 @@
-import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
 
 const CreateAccount = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    dob: '',
-    email: '',
-    phone: '',
-    password: ''
+    firstName: "",
+    lastName: "",
+    dob: "",
+    email: "",
+    phone: "",
+    password: "",
   });
 
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const validatePhone = (phone) => /^[0-9]{10}$/.test(phone);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    setSuccess('');
+    setError("");
+    setSuccess("");
 
     if (!validateEmail(formData.email)) {
-      setError('Invalid email format');
+      setError("Invalid email format");
       return;
     }
 
     if (!validatePhone(formData.phone)) {
-      setError('Phone number must be 10 digits');
+      setError("Phone number must be 10 digits");
       return;
     }
 
     try {
-      const res = await fetch('http://localhost:5000/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+      const res = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
+          email: formData.email,
+          phone: formData.phone,
+          password: formData.password,
+          role: "user", // You can change this based on your needs
+        }),
       });
+
       const data = await res.json();
 
       if (res.ok) {
         setSuccess(data.message);
         setFormData({
-          firstName: '',
-          lastName: '',
-          dob: '',
-          email: '',
-          phone: '',
-          password: ''
+          firstName: "",
+          lastName: "",
+          dob: "",
+          email: "",
+          phone: "",
+          password: "",
         });
-             console.log(formData);
+        console.log(formData);
       } else {
         setError(data.message);
       }
     } catch {
-      setError('Server error');
+      setError("Server error");
     }
   };
 
@@ -63,7 +70,10 @@ const CreateAccount = () => {
     <Container className="mt-5 mb-5">
       <Row className="justify-content-center">
         <Col md={8}>
-          <div className="p-4 shadow rounded bg-white" style={{ fontFamily: 'Roboto Serif, serif' }}>
+          <div
+            className="p-4 shadow rounded bg-white"
+            style={{ fontFamily: "Roboto Serif, serif" }}
+          >
             <h2 className="mb-4 text-center">Create Account</h2>
             {error && <p className="text-danger text-center">{error}</p>}
             {success && <p className="text-success text-center">{success}</p>}
@@ -75,7 +85,9 @@ const CreateAccount = () => {
                     <Form.Control
                       type="text"
                       value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, firstName: e.target.value })
+                      }
                       required
                     />
                   </Form.Group>
@@ -86,7 +98,9 @@ const CreateAccount = () => {
                     <Form.Control
                       type="text"
                       value={formData.lastName}
-                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, lastName: e.target.value })
+                      }
                       required
                     />
                   </Form.Group>
@@ -97,7 +111,9 @@ const CreateAccount = () => {
                 <Form.Control
                   type="date"
                   value={formData.dob}
-                  onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, dob: e.target.value })
+                  }
                   required
                 />
               </Form.Group>
@@ -106,7 +122,9 @@ const CreateAccount = () => {
                 <Form.Control
                   type="email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                 />
               </Form.Group>
@@ -115,7 +133,9 @@ const CreateAccount = () => {
                 <Form.Control
                   type="tel"
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
+                  }
                   required
                   maxLength="10"
                 />
@@ -125,7 +145,9 @@ const CreateAccount = () => {
                 <Form.Control
                   type="password"
                   value={formData.password}
-                  onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, password: e.target.value })
+                  }
                   required
                 />
               </Form.Group>

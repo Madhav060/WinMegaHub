@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { UserContext } from './contexts/UserContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
 import Home from './pages/Home';
 import Contests from './pages/Contests';
 import Leaderboard from './pages/Leaderboard';
@@ -12,14 +12,10 @@ import CreateAccount from './pages/CreateAccount';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import ContestDetails from './pages/ContextDetails';
+import Certificates from './pages/Certificates';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const storedUser = localStorage.getItem('user');
-    setIsLoggedIn(!!storedUser);
-  }, []);
+  const { user } = useContext(UserContext);
 
   return (
     <Router>
@@ -31,16 +27,16 @@ function App() {
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/certificates" element={<Certificates/>} />
           <Route path="/create-account" element={<CreateAccount />} />
           <Route path="/contest/:title" element={<ContestDetails />} />
-          <Route 
-            path="/login" 
-            element={<Login setIsLoggedIn={setIsLoggedIn} />} 
+          <Route
+            path="/login"
+            element={<Login />}
           />
-
-          <Route 
-            path="/profile" 
-            element={isLoggedIn ? <Profile /> : <Navigate to="/login" />} 
+          <Route
+            path="/profile"
+            element={user ? <Profile /> : <Navigate to="/login" />}
           />
         </Routes>
       </main>

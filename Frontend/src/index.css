@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Optional: Custom global styles */
+@layer base {
+  a {
+    @apply no-underline;
+  }
+}
+
+@layer components {
+  /* Custom component styles if needed */
+}

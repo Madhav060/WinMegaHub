@@ -41,14 +41,16 @@ const Dashboard = () => {
   };
 
   const sidebarItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'account', label: 'Account Settings', icon: Settings },
-    { id: 'wallet', label: 'Wallet Summary', icon: Wallet },
-    { id: 'contest', label: 'Contest Participation', icon: Trophy },
-    { id: 'kyc', label: 'KYC Verification', icon: Shield },
-    { id: 'referral', label: 'Referral Program', icon: Users },
-    { id: 'support', label: 'Support & Help', icon: HeadphonesIcon },
-  ];
+  { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { id: 'account', label: 'Account Settings', icon: Settings },
+  { id: 'wallet', label: 'Wallet Summary', icon: Wallet },
+  { id: 'contest', label: 'Contest Participation', icon: Trophy },
+  { id: 'certificates', label: 'My Certificates', icon: Award }, // New item
+  { id: 'kyc', label: 'KYC Verification', icon: Shield },
+  { id: 'referral', label: 'Referral Program', icon: Users },
+  { id: 'support', label: 'Support & Help', icon: HeadphonesIcon },
+];
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
@@ -143,6 +145,7 @@ const Dashboard = () => {
           {activeSection === 'account' && <AccountSettings />}
           {activeSection === 'wallet' && <WalletSummary userData={userData} />}
           {activeSection === 'contest' && <ContestParticipation userData={userData} />}
+          {activeSection === 'certificates' && <CertificatesSection />} {/* New section */}
           {activeSection === 'kyc' && <KYCVerification userData={userData} />}
           {activeSection === 'referral' && <ReferralProgram userData={userData} />}
           {activeSection === 'support' && <SupportHelp />}
@@ -471,6 +474,131 @@ const KYCVerification = ({ userData }) => (
     </div>
   </div>
 );
+
+  const CertificatesSection = () => {
+  const certificates = [
+    {
+      id: 'CERT-001',
+      title: 'Weekly Championship Winner',
+      contest: 'Math Quiz Championship',
+      date: '2023-06-15',
+      status: 'verified',
+      downloadUrl: '#'
+    },
+    {
+      id: 'CERT-002',
+      title: 'Top 10 Performer',
+      contest: 'Science Bowl',
+      date: '2023-05-28',
+      status: 'verified',
+      downloadUrl: '#'
+    },
+    {
+      id: 'CERT-003',
+      title: 'Participation Certificate',
+      contest: 'History Challenge',
+      date: '2023-05-10',
+      status: 'pending',
+      downloadUrl: '#'
+    },
+  ];
+
+  return (
+    <div className="space-y-8">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h2 className="text-2xl font-bold text-slate-900">My Certificates</h2>
+          <p className="text-slate-500">View and download your achievement certificates</p>
+        </div>
+        <button className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all">
+          <Download size={16} className="inline mr-2" />
+          Download All
+        </button>
+      </div>
+
+      {/* Certificates Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {certificates.map((cert) => (
+          <div key={cert.id} className="bg-white rounded-2xl shadow-sm border border-slate-200/60 overflow-hidden hover:shadow-md transition-shadow">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 text-center border-b border-slate-200">
+              <Award size={48} className="mx-auto text-blue-600" />
+              <h3 className="text-xl font-bold text-slate-900 mt-4">{cert.title}</h3>
+              <p className="text-slate-600 mt-1">{cert.contest}</p>
+            </div>
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-sm text-slate-500">Issued on: {cert.date}</span>
+                <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
+                  cert.status === 'verified' 
+                    ? 'bg-green-100 text-green-700' 
+                    : 'bg-yellow-100 text-yellow-700'
+                }`}>
+                  {cert.status === 'verified' ? (
+                    <>
+                      <CheckCircle size={12} className="mr-1" />
+                      Verified
+                    </>
+                  ) : (
+                    <>
+                      <Clock size={12} className="mr-1" />
+                      Pending
+                    </>
+                  )}
+                </span>
+              </div>
+              <div className="flex space-x-3">
+                <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-blue-700 transition-colors flex items-center justify-center">
+                  <Eye size={16} className="mr-2" />
+                  View
+                </button>
+                <button className="flex-1 border border-slate-200 text-slate-700 py-2 px-4 rounded-lg text-sm hover:bg-slate-50 transition-colors flex items-center justify-center">
+                  <Download size={16} className="mr-2" />
+                  Download
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Empty State (for when no certificates) */}
+      {/* <div className="bg-slate-50 rounded-2xl p-12 text-center">
+        <Award size={48} className="mx-auto text-slate-300" />
+        <h3 className="text-lg font-medium text-slate-500 mt-4">No certificates yet</h3>
+        <p className="text-slate-400 mt-1">Participate in contests to earn certificates</p>
+        <button className="mt-6 bg-gradient-to-r from-violet-500 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all">
+          Browse Contests
+        </button>
+      </div> */}
+
+      {/* Certificate Verification */}
+      <div className="bg-gradient-to-r from-violet-50 to-purple-50 rounded-2xl p-6 border border-violet-200">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-slate-900">Verify a Certificate</h3>
+            <p className="text-slate-600 mt-1">Check the authenticity of any certificate</p>
+          </div>
+          <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-xl flex items-center justify-center">
+            <Shield size={24} className="text-white" />
+          </div>
+        </div>
+        <div className="mt-6">
+          <div className="flex">
+            <input 
+              type="text" 
+              placeholder="Enter Certificate ID" 
+              className="flex-1 px-4 py-3 border border-slate-200 rounded-l-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-colors" 
+            />
+            <button className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-6 py-3 rounded-r-xl font-medium hover:shadow-lg transition-all">
+              Verify
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const ReferralProgram = ({ userData }) => (
   <div className="space-y-8">
